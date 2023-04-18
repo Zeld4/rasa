@@ -11,11 +11,10 @@ RUN apt-get update \
 
 WORKDIR /app
 
+# upgrade pip version
 RUN pip install --no-cache-dir --upgrade pip
 
 RUN pip install rasa==2.8.1
-
-#Optional step
 
 ADD config.yml config.yml
 ADD domain.yml domain.yml
